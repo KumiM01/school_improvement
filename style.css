@@ -1,16 +1,52 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  /* font smoothing */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  width: inherit;
 }
+
+body,
+/* h1, */
+h2,
+h3,
+p,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.logo h1 {
+  position: absolute;
+  color: rgb(106, 204, 106);
+  left: 2px;
+  font-size: 10rem;
+  font-weight: 600;
+  padding-right: 18px;
+  font-family: Times, serif;
+  }
 
 html,
 body {
   width: 100%;
-  font-family: Poppins, sans-serif;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  position: relative;
+  padding: 12px;
+  margin-bottom: 24px;
+}
+
+.logo {
+  display: block;
+  text-align: left;
+}
+
+.logo img {
+  max-width: 100%;
 }
 
 main {
@@ -18,43 +54,26 @@ main {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 28px;
-}
-
-header {
-  /* width: 100%; */
-}
-
-.logo {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-
-  padding: 24px 32px;
-  max-width: 1280px;
-  /* max-height: 88px; */
-}
-
-.logo img {
-  aspect-ratio: auto;
+  padding: 0 16px;
 }
 
 h2,
 h3 {
   font-weight: normal;
-  padding-bottom: 16px;
-}
-
-h3 {
-  margin-left: 12px;
+  padding-bottom: 12px;
 }
 
 small {
   color: rgb(53, 52, 52);
+  margin: 0;
 }
 
 section {
-  margin-bottom: 68px;
+  margin-bottom: 24px;
+}
+
+ul {
+  padding-left: 12px;
 }
 
 ol {
@@ -68,18 +87,14 @@ section:last-of-type {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 24px;
+  padding: 0px 16px 80px 16px;
   background-image: url(./assets/afternoonMeals.png);
   background-position: bottom;
   background-size: contain;
   background-repeat: no-repeat;
-  padding-bottom: 170px;
 }
 
 .horizontal-list {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 32px 18px;
   margin-bottom: 24px;
   text-align: center;
   word-spacing: 2px;
@@ -87,17 +102,17 @@ section:last-of-type {
 }
 
 .horizontal-list li {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  aspect-ratio: auto;
   padding: 18px;
-  font-weight: bolder;
-  font-size: large;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: medium;
   background: rgba(0, 128, 0, 0.6);
-  position: relative;
-  overflow: hidden;
   color: #333;
+  overflow: hidden;
 }
 
 .background-text {
@@ -106,7 +121,7 @@ section:last-of-type {
   left: 2px;
   font-size: 10rem;
   font-weight: 600;
-  padding-right: -18px;
+  padding-right: 18px;
   font-family: Times, serif;
 }
 
@@ -114,14 +129,51 @@ section:last-of-type {
   z-index: 1;
 }
 
-@media width and (min-width=760px) {
-  .logo {
-    flex-wrap: nowrap;
-    /* max-width: 1280px; */
-    max-height: 88px;
-    /* margin: 0 auto; */
+/* Media query for tablet and larger screens */
+@media screen and (min-width: 768px) {
+  header {
+    padding: 24px;
+    margin-bottom: 32px;
   }
-}
 
-@media screen and (min-width="1280px") {
+  section {
+    margin-bottom: 68px;
+  }
+  section:last-of-type {
+    padding-bottom: 170px;
+  }
+
+  main {
+    padding: 0 28px;
+  }
+
+  h3 {
+    margin-left: 12px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-height: 240px;
+    gap: 10px;
+    max-width: 1220px;
+    margin: 0 auto;
+  }
+
+  .logo img {
+    aspect-ratio: auto;
+    max-height: 88px;
+  }
+
+  .horizontal-list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 32px 18px;
+  }
+
+  .horizontal-list li {
+    font-size: large;
+    margin-bottom: 18px;
+  }
 }
