@@ -1,11 +1,16 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  /* font smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: inherit;
 }
 
 html,
 body {
   width: 100%;
+  font-family: Poppins, sans-serif;
 }
 
 main {
@@ -17,14 +22,27 @@ main {
 }
 
 header {
+  /* width: 100%; */
+}
+
+.logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
   padding: 24px 32px;
-  width: 100%;
+  max-width: 1280px;
+  /* max-height: 88px; */
+}
+
+.logo img {
+  aspect-ratio: auto;
 }
 
 h2,
 h3 {
   font-weight: normal;
-  padding-bottom: 24px;
+  padding-bottom: 16px;
 }
 
 h3 {
@@ -36,39 +54,36 @@ small {
 }
 
 section {
-  margin-bottom: 48px;
+  margin-bottom: 68px;
 }
 
 ol {
   padding: 0;
 }
 
-footer {
+section:last-of-type {
   width: 100%;
+  position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 24px;
-}
-
-footer > img {
-  width: 100%;
-  max-width: 240px;
-}
-
-.logo {
-  width: 100%;
-  max-width: 640px;
-  /* margin-left: 32px; */
+  background-image: url(./assets/afternoonMeals.png);
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-bottom: 170px;
 }
 
 .horizontal-list {
   display: grid;
   grid-template-columns: auto auto auto;
-  gap: 18px;
+  gap: 32px 18px;
   margin-bottom: 24px;
   text-align: center;
   word-spacing: 2px;
+  color: yellow;
 }
 
 .horizontal-list li {
@@ -76,73 +91,37 @@ footer > img {
   align-items: center;
   justify-content: center;
   aspect-ratio: auto;
-  border: 1px solid #999;
   padding: 18px;
   font-weight: bolder;
-  color: #333;
+  font-size: large;
+  background: rgba(0, 128, 0, 0.6);
   position: relative;
   overflow: hidden;
+  color: #333;
 }
 
 .background-text {
   position: absolute;
-  z-index: -1;
+  color: lightgreen;
   left: 2px;
-  color: #ccc;
-  font-size: 9rem;
+  font-size: 10rem;
   font-weight: 600;
   padding-right: -18px;
+  font-family: Times, serif;
 }
 
-/* 
-h1 {
-  margin: auto;
-  text-align: center;
-  padding-left: 50px;
-  background-color: black;
-  color: white;
-}
-h2 {
-  margin-left: 20px;
-  color: aliceblue;
-  border-color: black;
-
-  background-color: rgb(68, 2, 2);
+.horizontal-list li p {
+  z-index: 1;
 }
 
-h3 {
-  padding-left: 50px;
+@media width and (min-width=760px) {
+  .logo {
+    flex-wrap: nowrap;
+    /* max-width: 1280px; */
+    max-height: 88px;
+    /* margin: 0 auto; */
+  }
 }
 
-p {
-  padding-left: 70px;
+@media screen and (min-width="1280px") {
 }
-
-div ol {
-  padding-left: 50px;
-}
-
-div ul {
-  padding-left: 50px;
-}
-
-div {
-  padding-left: 100px;
-}
-
-img {
-  position: auto;
-  margin-top: -50;
-  padding-left: 100px;
-  padding-top: 0;
-}
-
-ol span {
-  font-weight: bolder;
-}
-
-section {
-  background-color: rgb(68, 2, 2);
-  color: white;
-  padding-bottom: 0;
-} */
