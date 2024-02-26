@@ -13,9 +13,9 @@ li {
   padding: 0;
 }
 
-.logo h1 {
-  position: absolute;
-  color: rgb(106, 204, 106);
+ h1 {
+  position: relative;
+  color: rgb(19, 160, 19);
   left: 2px;
   font-size: 2em;
   font-weight: 600;
@@ -133,7 +133,7 @@ section:last-of-type {
 @media screen and (min-width: 768px) {
   header {
     padding: 24px;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
   }
 
   section {
